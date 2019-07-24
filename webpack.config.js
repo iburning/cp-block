@@ -5,6 +5,7 @@
  */
 
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const babelOptions = {
   babelrc: false,
@@ -45,13 +46,49 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development'
+            }
+          },
+          {
+            loader: 'css-loader'
+          }
+        ]
+      },
+
+      {
+        test: /\.less$/i,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development'
+            }
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'less-loader'
+          }
+        ]
+      },
+
+      {
         test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: babelOptions
       },
+
       {
-        test: /\.(ts|tsx)?$/,
+        test: /\.(ts|tsx)?$/i,
         use: [
           {
             loader: 'babel-loader',
@@ -66,5 +103,9 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+
+  plugins: [
+    new MiniCssExtractPlugin()
+  ]
 }

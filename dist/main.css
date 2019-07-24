@@ -1,0 +1,19 @@
+/**
+ * @namespace CPBlock.less
+ * @author burning <www.codepie.net>
+ * @version 2019.06.21
+ */
+.cp-block {
+  margin-bottom: 24px;
+  background-color: #fff;
+}
+.cp-block-header,
+.cp-block-body {
+  position: relative;
+  padding: 12px;
+}
+.cp-block-title {
+  margin: 0;
+  font-weight: 100;
+}
+

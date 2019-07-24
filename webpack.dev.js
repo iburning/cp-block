@@ -25,6 +25,8 @@ const config = {
   externals: {},
 
   plugins: [
+    ...webpackConfig.plugins,
+
     new HtmlWebpackPlugin({
       template: `${SRC_PATH}/index.html`,
     })

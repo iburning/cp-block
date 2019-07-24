@@ -7,7 +7,7 @@
 import * as React from 'react'
 import { PureComponent, ReactNode } from 'react'
 import classNames from 'classnames'
-// import './CPBlock.less'
+import './CPBlock.less'
 
 const CLASS_NAME = 'cp-block'
 
