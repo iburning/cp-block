@@ -45,13 +45,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js?$/,
+        test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: babelOptions
       },
       {
-        test: /\.tsx?$/,
+        test: /\.(ts|tsx)?$/,
         use: [
           {
             loader: 'babel-loader',

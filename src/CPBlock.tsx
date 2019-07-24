@@ -4,13 +4,14 @@
  * @version 2019.07.24
  */
 
-import React, { PureComponent, ReactNode } from 'react'
+import * as React from 'react'
+import { PureComponent, ReactNode } from 'react'
 import classNames from 'classnames'
 // import './CPBlock.less'
 
 const CLASS_NAME = 'cp-block'
 
-export interface CPBlockProps {
+export interface ICPBlockProps {
   className?: String;
   children?: ReactNode;
   extra?: ReactNode;
@@ -18,7 +19,7 @@ export interface CPBlockProps {
   title?: ReactNode;
 }
 
-class CPBlock extends PureComponent<CPBlockProps, {}> {
+class CPBlock extends PureComponent<ICPBlockProps, {}> {
   render() {
     const { children, className, extra, footer, title } = this.props
 
