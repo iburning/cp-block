@@ -1,0 +1,36 @@
+{
+  "name": "cp-block",
+  "version": "0.0.1",
+  "description": "codepie ui block",
+  "main": "dist/CPBlock.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iburning/cp-block.git"
+  },
+  "keywords": [
+    "block",
+    "ui",
+    "codepie"
+  ],
+  "author": "burning",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iburning/cp-block/issues"
+  },
+  "homepage": "https://github.com/iburning/cp-block#readme",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3"
+  }
+}
